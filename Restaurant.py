@@ -11,3 +11,5 @@ class Restaurant:
         self.r_name = r_name
         self.comment = comment
 
+    def get_comment(self):
+        return self.comment
