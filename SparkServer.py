@@ -18,12 +18,21 @@ def Index():
 @app.route('/big_data', methods=['GET'])
 def big_data():
     place_id = request.args.get('place_id')
-    score = Main.load_bigdata(place_id)
+    key = request.args.get('key')
+    if key == '123456':
+        score = Main.load_bigdata(place_id)
+    else:
+        return jsonify({"result": "Key Error"})
     return jsonify({"result": score})
 
 
-
-
+''' #딥러닝 학습 시키는 코드
+@app.route('/deep_learning', methods=['GET'])
+def deep_learnig():
+    key = request.args.get('key')
+    if key == '123456':
+        import ReviewAnalysis
+'''
 
 
 if __name__ == '__main__':
