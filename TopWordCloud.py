@@ -9,4 +9,4 @@ def make_word_cloud(top_list, keyword):
     plt.figure(figsize=(10, 8))
     plt.axis('off')
     plt.imshow(cloud)
-    plt.savefig('wordcloud/'+keyword+'.png')
+    plt.savefig('D:/upload_file/word_cloud/'+keyword+'.png')
